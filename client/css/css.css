@@ -1,0 +1,19 @@
+.wrapper1 {
+    display: grid;
+    grid-template-columns: 2fr 5fr;
+    grid-gap: 1vw;
+    grid-auto-rows: minmax(50px, auto);
+}
+.wrapper > div{
+    background-color: antiquewhite;
+}
+
+.wrapper2 {
+    display: grid;
+    grid-gap: 1vw;
+    grid-auto-rows: max-content
+}
+
+#title {
+    text-align: center;
+}

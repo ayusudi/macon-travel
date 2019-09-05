@@ -17,6 +17,7 @@ $(document).ready(function(){
                     <img src="${value.urls.small}" style="margin: 10px 10px 10px 10px" alt="pictures of country">
                     `
                 )
+                
             })
 
         })

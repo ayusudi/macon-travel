@@ -4,37 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <link rel = "stylesheet" type = "text/css" href="./css/selection.css" />
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+
+    <link rel = "stylesheet" type = "text/css" href="./css/selection.css">
+    <link rel="stylesheet" type="text/css" href="./css/css.css">
     <title>Document</title>
 </head>
 <body>
-    <h1>Welcome to Macon Travel</h1>
-    <div style="width: 200px; ">
-            <label> Countries </label>
-            <select class="select-css" name="" id="">
-                <option>Indonesia</option>
-                <option>America</option>
-                <option>Australia</option>
-                <option>New Zealand</option>
-                <option>Iceland</option>
-                <option>Netherland</option>
-                <option>Japan</option>
-                <option>Korea</option>
-            </select>
+    <h1 id="title">Welcome to Macon Travel</h1>
+    <div  class="wrapper1">
+        <div id="box1">
+            <div class="wrapper2">
+                <div id="box1">
+                    <div style="width: 200px; ">
+                            <label style="display: block; margin-bottom: 10px;"> Countries </label>
+                            <select class="select-css" name="" id="">
+                                <option>Indonesia</option>
+                                <option>America</option>
+                                <option>Australia</option>
+                                <option>New Zealand</option>
+                                <option>Iceland</option>
+                                <option>Netherland</option>
+                                <option>Japan</option>
+                                <option>Korea</option>
+                            </select>
+                    </div>
+                </div>
+                    <div id="box2"><div id="listPhotos" style="overflow: scroll; max-height: 100vh;"></div>
+                </div>
+            </div>
+        </div>
+        <div id="box2">
+            <div style="width: 80%;">
+                    <div class="articleWiki">
+                        <div class="country"></div>
+                        <div class="paragraph" style="width: 550px"></div>
+                    </div>
+            </div>           
+        </div>
     </div>
-    <div id="listPhotos" style="overflow: scroll; height: 400px; width: 1000px;"></div>
-    <div class="articleWiki">
-        <div class="country"></div>
-        <div class="paragraph" style="width: 550px"></div>
-    </div>
-    <script src="./js/wikipedia.js"></script>
- <script src=''./js/unsplash.js'></script>
-<script>
-
     
-</script>
+<script src="./js/wikipedia.js"></script>
+<script src='./js/unsplash.js'></script>
 </body>
 </html>

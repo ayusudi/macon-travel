@@ -1,10 +1,16 @@
 .welcome{
-    padding: 120px;
+    padding: 65px;
     background-image: url("https://cdn.shopify.com/s/files/1/1321/0649/products/9780735348394_1024x1024.jpg?v=1545335034");
-    color : white;
+    color : rgb(247, 246, 240);
+    margin: 30px 25px ;
+    font-weight: 900;
+    text-shadow: 2px 5px #070000;
 }
 
+
+
 .wrapper1 {
+    margin-left:20px; 
     display: grid;
     grid-template-columns: 2fr 5fr;
     grid-gap: 1vw;

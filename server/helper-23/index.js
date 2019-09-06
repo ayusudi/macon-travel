@@ -10,10 +10,10 @@ module.exports = {
        return bcrypt.compareSync(passwordInput, passwordDb);
     },
     signToken(data){
-        var token = jwt.sign({ data }, process.env.SECRET);
+        var token = jwt.sign({ data }, 'abcdefgh');
         return token
     },
     TokenVerify : (token)=>{
-        return jwt.verify(token , process.env.SECRET)
+        return jwt.verify(token , 'abcdefgh')
     }
 }

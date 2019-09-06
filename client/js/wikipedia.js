@@ -18,6 +18,7 @@ function getAll(country) {
         url: `http://localhost:3000/wikipedia/all/${country}`
     })
         .done(function ({ extract, title }) {
+            $(".country").empty()
             $(".country").append(`<h1>${title}</h1>`)
             let array = extract.split('.')
             if (country == 'Japan') {
@@ -47,7 +48,7 @@ function getAll(country) {
             console.log('Error');
         })
 }
-console.log('test');
+// console.log('test');
 // getAll('Indonesia')
 // getAll('Korea')
 // getAll('Australia')

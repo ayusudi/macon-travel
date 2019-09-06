@@ -1,6 +1,7 @@
 $(document).ready(function(){
     // $('#loggedIn').css('filter', 'blur(4px)')
     $('.select-css').change(function(){
+        $('.main').remove()
         $('.country').empty()
         $('.paragraph').empty()
         getAll($(this).val())

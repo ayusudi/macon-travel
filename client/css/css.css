@@ -7,7 +7,9 @@
     text-shadow: 2px 5px #070000;
 }
 
-
+.paragraph{
+    max-width: 500px
+}
 
 .wrapper1 {
     margin-left:20px; 
@@ -27,6 +29,7 @@
 }
 
 .wrapper2 {
+    margin-left:25px; 
     display: grid;
     grid-template-columns: 5fr 2fr;
     grid-gap: 1vw;

@@ -1,3 +1,9 @@
+.welcome{
+    padding: 120px;
+    background-image: url("https://cdn.shopify.com/s/files/1/1321/0649/products/9780735348394_1024x1024.jpg?v=1545335034");
+    color : white;
+}
+
 .wrapper1 {
     display: grid;
     grid-template-columns: 2fr 5fr;
@@ -19,6 +25,10 @@
     grid-template-columns: 5fr 2fr;
     grid-gap: 1vw;
     grid-auto-rows: minmax(50px, auto);
+}
+
+.box21{
+    margin-top: 25px
 }
 
 .box22 {

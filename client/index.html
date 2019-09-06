@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,15 +8,24 @@
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
 
-    
 
-    <link rel = "stylesheet" type = "text/css" href="./css/selection.css">
+
+    <link rel="stylesheet" type="text/css" href="./css/selection.css">
     <link rel="stylesheet" type="text/css" href="./css/css.css">
     <title>Document</title>
 </head>
 <body>
+    <div class="navbar" style="margin-bottom: 70px">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-info fixed-top">
+                <a class="navbar-brand" href="#" style="color: white">Macon Travel</a>
+                <div class="navbar-right" style="display: none">
+                    <a href="#" onclick="signOut();" style="color: rgb(248, 248, 248); display: none" class="signOut">Sign Out</a>
+                </div>
+        </nav>
+    </div>
     <!-- <div id="loggedOut">
             <div class="loginForm">
                 <label for="email"><b>email</b></label>
@@ -31,26 +41,29 @@
             </div>
     </div> -->
     <div id="loggedIn">
-        <h1 id="title">Welcome to Macon Travel</h1>
-        <div  class="wrapper1">
+        <div class="welcome">
+            <h1 id="title">Welcome to Macon Travel</h1>
+        </div>
+        <div class="wrapper1">
             <div id="box1">
                 <div class="wrapper21">
                     <div id="box1">
                         <div style="width: 200px; ">
-                                <label style="display: block; margin-bottom: 10px;"> Countries </label>
-                                <select class="select-css" name="" id="">
-                                    <option>Indonesia</option>
-                                    <option>America</option>
-                                    <option>Australia</option>
-                                    <option>New Zealand</option>
-                                    <option>Iceland</option>
-                                    <option>Netherland</option>
-                                    <option>Japan</option>
-                                    <option>Korea</option>
-                                </select>
+                            <label style="display: block; margin-bottom: 10px;"> Countries </label>
+                            <select class="select-css" name="" id="">
+                                <option>Indonesia</option>
+                                <option>America</option>
+                                <option>Australia</option>
+                                <option>New Zealand</option>
+                                <option>Iceland</option>
+                                <option>Netherland</option>
+                                <option>Japan</option>
+                                <option>Korea</option>
+                            </select>
                         </div>
                     </div>
-                        <div id="box2"><div id="listPhotos" style="overflow: scroll; max-height: 100vh;"></div>
+                    <div id="box2">
+                        <div id="listPhotos" style="overflow: scroll; max-height: 100vh;"></div>
                     </div>
                 </div>
             </div>
@@ -61,18 +74,19 @@
                             <div class="country"></div>
                             <div class="paragraph"></div>
                         </div>
-                    </div>  
+                    </div>
                     <div class="box22">
-                            <div class="weather"  style="width: 80%">
-                                <h2>here</h2>
-                            </div>
-                        </div>          
+                        <div class="weather" style="width: 80%">
+                            <h2>here</h2>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        </div>
-    
-<script src="./js/wikipedia.js"></script>
-<script src='./js/unsplash.js'></script>
+    </div>
+
+    <script src="./js/wikipedia.js"></script>
+    <script src='./js/unsplash.js'></script>
 </body>
+
 </html>

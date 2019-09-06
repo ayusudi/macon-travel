@@ -6,15 +6,52 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link rel = "stylesheet" type = "text/css" href="./css/selection.css" />
+    <link rel="stylesheet" href="./weather.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>Document</title>
 </head>
-<body>
-    <div id="weather">
-        
+<body >
+    <div id="content" class="d-flex flex-row justify-content-start ">
+        <div id="image" class="mr-5 ml-5" style="height: 100%; width : 50%;">
+            <h1>Welcome to Macon Travel</h1>
+            <div style="width: 200px; ">
+                    <label> Countries </label>
+                    <select class="select-css" name="" id="list-country">
+                        <option>Indonesia</option>
+                        <option>America</option>
+                        <option>Australia</option>
+                        <option>New Zealand</option>
+                        <option>Iceland</option>
+                        <option>Netherland</option>
+                        <option>Japan</option>
+                        <option>Korea</option>
+                    </select>
+            </div>
+            <div>
+                <div id="listPhotos" style="overflow: scroll; height: 500px; width: 100%;">
+    
+                </div>
+            </div>
+        </div>
+        <div id="weather" class="ml-5 border border-dark">
+            <div class="head-ct mt-3 ml-3">
+                <p style="font-size: 30px; color : rgb(135, 135, 135); padding :0; margin: 0;" >Europe,Berlin</p>
+                <p style="font-size: 25px; color : rgb(135, 135, 135); padding :0; margin: 0;" >Friday 07:00</p>
+                <p style="font-size: 25px; color : rgb(135, 135, 135); padding :0; margin: 0;" >Clear throughout the day</p>
+            </div>
+            <div class="body mt-3 ml-3">
+                    <p style="color : rgb(33, 33, 33); padding :0; margin: 0; font: 50px arial,helvetica,sans-serif;" >80</p>
+            </div>
+        </div>
     </div>
     
-<script>
 
-</script>
+    <script src='./js/unsplash.js'></script>
+    <script>
+
+        
+    </script>
 </body>
 </html>

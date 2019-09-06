@@ -39,7 +39,7 @@ $(document).ready(function(){
                 <p style="font-size: 20px; color : rgb(135, 135, 135); padding :0; margin: 0;" >${data.weather.summary}</p>
             </div>
             <div class="body mt-3 ml-3">
-                    <p style="color : rgb(33, 33, 33); padding :0; margin: 0; font: 50px arial,helvetica,sans-serif;" >${data.temperature}</p>
+                    <p style="color : rgb(33, 33, 33); padding :0; margin: 0; font: 50px arial,helvetica,sans-serif;" >${data.temperature} C</p>
             </div>
             `)
         })

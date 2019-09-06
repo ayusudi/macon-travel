@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
-const { hashingPassword }  = require('../helpers')
+const { hashingPassword , }  = require('../helper-23')
 var UserSchema = new Schema({
   username : {
       type : String,

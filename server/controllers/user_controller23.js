@@ -1,4 +1,4 @@
-// const { User } = require('../model')
+const User = require('../model/user')
 // const {  compare ,  signToken } = require('../helpers')
 class user_controller {
     static Register(req,res,next){

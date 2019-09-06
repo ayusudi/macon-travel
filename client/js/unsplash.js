@@ -2,6 +2,9 @@ $(document).ready(function(){
     // $('#loggedIn').css('filter', 'blur(4px)')
     $('.select-css').change(function(){
         let co = $(this).val()
+        $('.country').empty()
+        $('.paragraph').empty()
+        getAll($(this).val())
         $('#listPhotos').empty()
         axios({
             method: 'GET',

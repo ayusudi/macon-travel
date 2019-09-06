@@ -4,7 +4,6 @@ function getSummary(country) {
         url: `https://en.wikipedia.org/api/rest_v1/page/summary/${country}`,
     })
         .done(function (data) {
-            console.log(data)
             $('.summary').empty()
             $(".summary").append(`
             <div style="margin-top:5%; margin-bottom:2%">
@@ -54,6 +53,7 @@ function getAll(country) {
                     $(".paragraph").append(`<p>${array[i]}</p>`)
                 }
             }
+            showLess()
         })
         .fail(err => {
             console.log('Error');

@@ -2,11 +2,14 @@ if(localStorage.getItem('token')){
     $('.g-signin2').hide()
     $('.signOut').show()
     $('#loggedIn').css('filter', 'blur(0px)')
+    $('fieldset').removeAttr('disabled')
+
+    
 }else {
     $('.g-signin2').show()
     $('.signOut').hide()
-
     $('#loggedIn').css('filter', 'blur(2px)')
+    $('fieldset').attr('disabled', 'disabled')
 }
 
 function onSignIn(googleUser) {
@@ -31,6 +34,8 @@ function AddToDB(token){
     $('#loggedIn').css('filter', 'blur(0px)')
     localStorage.setItem('token' , token1.token)
     console.log(token1.token , ' ini token dia')
+    $('fieldset').removeAttr('disabled')
+
     // WhenUserHasLogin()
 
   })
@@ -46,6 +51,8 @@ function SignOut() {
         $('.signOut').hide()
         $('.g-signin2').show()
         $('#loggedIn').css('filter', 'blur(2px)')
+        $('fieldset').attr('disabled', 'disabled')
+        
         localStorage.clear()
     });
 }

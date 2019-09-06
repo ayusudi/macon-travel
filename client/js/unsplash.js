@@ -2,7 +2,7 @@ $(document).ready(function(){
     // $('#loggedIn').css('filter', 'blur(4px)')
     $('.select-css').change(function(){
         let co = $(this).val()
-        $('.main').remove()
+        $('.main').hide()
        
         getAll($(this).val())
         $('#listPhotos').empty()

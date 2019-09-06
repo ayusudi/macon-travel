@@ -36,8 +36,6 @@ function AddToDB(token){
     console.log(token1.token , ' ini token dia')
     $('fieldset').removeAttr('disabled')
 
-    // WhenUserHasLogin()
-
   })
   .fail(function(jqXHR, textStatus) {
     console.log('Error:', textStatus);
@@ -52,7 +50,13 @@ function SignOut() {
         $('.g-signin2').show()
         $('#loggedIn').css('filter', 'blur(2px)')
         $('fieldset').attr('disabled', 'disabled')
-        
+        $(".country").empty()
+        $('.summary').empty()
+        $('.select-css').prop('selectedIndex',0)
+        $('.paragraph').empty()
+        $('#weather').empty()
+        $('#listPhotos').empty()
+        $('.main').show()
         localStorage.clear()
     });
 }

@@ -1,13 +1,5 @@
 $(document).ready(function(){
-<<<<<<< HEAD:client/js/unsplash.js
-     
-=======
-<<<<<<< HEAD:client/js/unsplash.js
     // $('#loggedIn').css('filter', 'blur(4px)')
-=======
-    $('#loggedIn').css('filter', 'blur(4px)')
->>>>>>> 91512ba3f34b8e21489e1a40b9cf397b1d00b6c3:client/js/js.js
->>>>>>> cefd20bb17f9fd3b4b884f0743b5d469b47289af:client/js/js.js
     $('.select-css').change(function(){
         let co = $(this).val()
         $('#listPhotos').empty()
@@ -20,6 +12,7 @@ $(document).ready(function(){
         })
         .then(photos =>{
             console.log(photos.data.results)
+            getAll($(this).val())
             $.each(photos.data.results, function(index, value){
                 $('#listPhotos').append(
                     `

@@ -12,6 +12,7 @@ function getSummary(country) {
 }
 function getAll(country) {
     console.log(country);
+    $(".country")
     $.ajax({
         method: 'GET',
         url: `http://localhost:3000/wikipedia/all/${country}`

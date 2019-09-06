@@ -17,3 +17,20 @@
 #title {
     text-align: center;
 }
+
+html {
+    height: 100%;
+}
+body {
+    min-height: 100%;
+}
+
+#loggetOut{
+    position: relative;
+}
+.loginForm{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%)
+}

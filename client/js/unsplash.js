@@ -2,7 +2,9 @@ $(document).ready(function(){
     // $('#loggedIn').css('filter', 'blur(4px)')
     $('.select-css').change(function(){
         let co = $(this).val()
+        $('.main').remove()
         $('.country').empty()
+        $('.summary').empty()
         $('.paragraph').empty()
         getAll($(this).val())
         $('#listPhotos').empty()
@@ -14,15 +16,12 @@ $(document).ready(function(){
             }
         })
         .then(photos =>{
-            console.log(photos.data.results)
-            getAll($(this).val())
             $.each(photos.data.results, function(index, value){
                 $('#listPhotos').append(
                     `
                     <img src="${value.urls.small}" style="margin: 10px 10px 10px 10px" alt="pictures of country">
                     `
                 )
-                
             })
             return axios({
                 method : 'GET',

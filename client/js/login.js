@@ -31,7 +31,7 @@ function AddToDB(token){
     $('#loggedIn').css('filter', 'blur(0px)')
     localStorage.setItem('token' , token1.token)
     console.log(token1.token , ' ini token dia')
-    WhenUserHasLogin()
+    // WhenUserHasLogin()
 
   })
   .fail(function(jqXHR, textStatus) {

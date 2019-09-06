@@ -3,9 +3,7 @@ $(document).ready(function(){
     $('.select-css').change(function(){
         let co = $(this).val()
         $('.main').remove()
-        $('.country').empty()
-        $('.summary').empty()
-        $('.paragraph').empty()
+       
         getAll($(this).val())
         $('#listPhotos').empty()
         axios({
@@ -29,16 +27,15 @@ $(document).ready(function(){
             })
         })
         .then(({data}) =>{
-            console.log(data)
             $('#weather').empty()
             $('#weather').append(`
             <div class="head-ct mt-3 ml-3">
                 <p style="font-size: 30px; color : rgb(135, 135, 135); padding :0; margin: 0;" >${data.location}</p>
-                <p style="font-size: 25px; color : rgb(135, 135, 135); padding :0; margin: 0;" >Friday 07:00</p>
+                <p style="font-size: 25px; color : rgb(135, 135, 135); padding :0; margin: 0;" >${getday()}</p>
                 <p style="font-size: 20px; color : rgb(135, 135, 135); padding :0; margin: 0;" >${data.weather.summary}</p>
             </div>
             <div class="body mt-3 ml-3">
-                    <p style="color : rgb(33, 33, 33); padding :0; margin: 0; font: 50px arial,helvetica,sans-serif;" >${data.temperature}</p>
+                    <p style="color : rgb(33, 33, 33); padding :0; margin: 0; font: 50px arial,helvetica,sans-serif;" >${data.temperature} C</p>
             </div>
             `)
         })
@@ -47,3 +44,30 @@ $(document).ready(function(){
         })
     })
 })
+function getday(){
+    console.log(new Date().getDay())
+    switch(new Date().getDay()){
+        
+        case 1:{
+            return "Monday"        
+        }
+        case 2:{
+            return "Tuesday"
+        }
+        case 3:{
+            return "Wednesday"
+        }
+        case 4:{
+            return "Thursday"
+        }
+        case 5:{
+            return "Friday"
+        }
+        case 6:{
+            return "Saturday"
+        }
+        case 7:{
+            return "Sunday"
+        }
+    }
+}

@@ -18,7 +18,7 @@ class weather_controller {
             return axios.get(`https://api.darksky.net/forecast/b610df5c0f210ed2419183ccb1bd2030/${lat},${lon}`)
         })
         .then(({data})=>{
-            result.temperature = data.currently.temperature
+            result.temperature = ((Number(data.currently.temperature)-32)*(5/9)).toFixed(1)
             result.wind = data.currently.windSpeed
             result.weather = {  summary : data.hourly.summary , icon : data.hourly.icon } 
             result.location = data.timezone

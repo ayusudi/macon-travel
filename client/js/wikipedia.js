@@ -4,6 +4,8 @@ function getSummary(country) {
         url: `https://en.wikipedia.org/api/rest_v1/page/summary/${country}`,
     })
         .done(function (data) {
+            console.log(data)
+            $('.summary').empty()
             $(".summary").append(`
             <div style="margin-top:5%; margin-bottom:2%">
                 <p>${data.extract}</p> 
@@ -22,6 +24,7 @@ function getAll(country) {
     })
         .done(function ({ extract, title }) {
             $(".country").empty()
+            $('.paragraph').empty()
             getSummary(country)
             $(".country").append(`<h1>${title}</h1>`)
             $(".paragraph").append( `
@@ -41,7 +44,7 @@ function getAll(country) {
             }
             else if (country == 'America') {
                 console.log('test');
-                for(let i= 1; i< array.length; i++){
+                for(let i= 14; i< array.length; i++){
                     $(".paragraph").append(`<p>${array[i]}</p>`)
                 }
             }

@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    $('#loggedIn').css('filter', 'blur(4px)')
+    // $('#loggedIn').css('filter', 'blur(4px)')
     $('.select-css').change(function(){
         $('#listPhotos').empty()
         axios({

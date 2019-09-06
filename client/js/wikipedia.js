@@ -4,7 +4,12 @@ function getSummary(country) {
         url: `https://en.wikipedia.org/api/rest_v1/page/summary/${country}`,
     })
         .done(function (data) {
-            console.log(data);
+            $(".summary").append(`
+            <div style="margin-top:5%; margin-bottom:2%">
+                <p>${data.extract}</p> 
+                <button onclick="showAll()">Show More </button> 
+            <br>
+            </div>`)
         })
         .fail(err => {
             console.log('Error');
@@ -17,7 +22,12 @@ function getAll(country) {
         url: `http://localhost:3000/wikipedia/all/${country}`
     })
         .done(function ({ extract, title }) {
+            getSummary(country)
             $(".country").append(`<h1>${title}</h1>`)
+            $(".paragraph").append( `
+            <div style="margin-top:5%; margin-bottom:2%">
+                <button onclick="showLess()">Show Less</button>
+            </div>`)
             let array = extract.split('.')
             if (country == 'Japan') {
                 for (let i = 4; i < array.length; i++) {
@@ -37,7 +47,7 @@ function getAll(country) {
             }
             else {
                 for (let i = 1; i < array.length; i++) {
-                    console.log(array[i]);
+                    // console.log(array[i]);
                     $(".paragraph").append(`<p>${array[i]}</p>`)
                 }
             }
@@ -46,9 +56,21 @@ function getAll(country) {
             console.log('Error');
         })
 }
-console.log('test');
+
+function showAll(){
+    $('.paragraph').show()
+    $('.summary').hide()
+    console.log('heree');
+}
+
+function showLess(){
+    $('.paragraph').hide()
+    $('.summary').show()
+    console.log('heree');
+}
+
 // getAll('Indonesia')
 // getAll('Korea')
 // getAll('Australia')
 // getAll('Japan')
-// getAll('Netherland')
+// getSummary('Netherland')

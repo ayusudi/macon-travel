@@ -3,7 +3,9 @@ $(document).ready(function(){
     $('.select-css').change(function(){
         $('.main').remove()
         $('.country').empty()
+        $('.summary').empty()
         $('.paragraph').empty()
+        showLess()
         getAll($(this).val())
         $('#listPhotos').empty()
         axios({

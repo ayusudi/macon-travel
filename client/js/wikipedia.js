@@ -21,12 +21,18 @@ function getAll(country) {
             let array = extract.split('.')
             if (country == 'Japan') {
                 for (let i = 4; i < array.length; i++) {
-                    if (i < 7)  {
+                    if (i < 7) {
                         $(".paragraph").append(`<p>${array[i]}</p>`)
                     }
-                    else if (i > 14){
+                    else if (i > 14) {
                         $(".paragraph").append(`<p>${array[i]}</p>`)
                     }
+                }
+            }
+            else if (country == 'America') {
+                console.log('test');
+                for(let i= 1; i< array.length; i++){
+                    $(".paragraph").append(`<p>${array[i]}</p>`)
                 }
             }
             else {
@@ -45,4 +51,4 @@ console.log('test');
 // getAll('Korea')
 // getAll('Australia')
 // getAll('Japan')
-getAll('Netherland')
+// getAll('Netherland')

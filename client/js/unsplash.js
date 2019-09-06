@@ -1,10 +1,9 @@
 $(document).ready(function(){
-<<<<<<< HEAD:client/js/unsplash.js
     // $('#loggedIn').css('filter', 'blur(4px)')
-=======
-    $('#loggedIn').css('filter', 'blur(4px)')
->>>>>>> 91512ba3f34b8e21489e1a40b9cf397b1d00b6c3:client/js/js.js
     $('.select-css').change(function(){
+        $('.country').empty()
+        $('.paragraph').empty()
+        getAll($(this).val())
         $('#listPhotos').empty()
         axios({
             method: 'GET',

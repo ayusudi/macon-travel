@@ -1,11 +1,11 @@
-# ProjectWeek1P2
+# Macon Travel
 
 ```html
 server:
 http://localhost:3000/
 ```
 
-## **List of hacktivGit Routes**
+## **List of Macon Travel Routes**
 
  HTTP     | Routes                    | Headers  | Body           | Query Params                     | Description                                 |
 | ---     | -----                     | ---      | ---            | ---                              | ---                                         |
